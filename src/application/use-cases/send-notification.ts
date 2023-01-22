@@ -28,14 +28,9 @@ export class SendNotification {
       content: new NotificationContent(content),
       category,
     });
-    try {
-    } catch (error) {
-      console.log(error);
-      return { notification, error };
-    }
 
-    const retorno = await this.notificationsRepository.create(notification);
-    console.log(retorno);
+    await this.notificationsRepository.create(notification);
+
     return { notification };
   }
 }
