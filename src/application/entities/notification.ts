@@ -70,7 +70,7 @@ export class Notification {
   }
 
   public get cancelledAt(): Date | null | undefined {
-    return this.props.readAt;
+    return this.props.cancelledAt;
   }
   public cancel(): void {
     this.props.cancelledAt = new Date();
